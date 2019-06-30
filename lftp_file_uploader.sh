@@ -3,7 +3,7 @@
 #usage
 function usage {
 	echo "USAGE: For MAN page use -m [help command]"
-	echo "$0 -u Username -p 'Password' -h Host -d Domain.com -f path_to_remotefile.txt"
+	echo "$0 -u Username -p 'Password' -h Host -f path_to_remotefile.txt"
 }
 
 while getopts ":u:p:h:d:f:m" opt; do
@@ -16,9 +16,6 @@ while getopts ":u:p:h:d:f:m" opt; do
 			;;
 		h) 
 			HOST=$OPTARG
-			;;
-		d) 
-			DOMAIN=$OPTARG
 			;;
 		f)
 			REMOTE_FILE=$OPTARG
